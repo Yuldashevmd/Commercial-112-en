@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <title>co.ccenter.uz</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="assets/logo.svg" alt="logo" />
+    </div>
+    <form id="myForm">
+      <div class="title">Complete the form to get a business proposal:</div>
+      <div class="form-content">
+        <div class="form-item">
+          <label for="full_name">Full name:</label>
+          <div class="icon-input">
+            <i class="fa fa-user icon"></i>
+            <input
+              type="text"
+              id="full_name"
+              name="full_name"
+              placeholder="Full name"
+            />
+          </div>
+          <p
+            class="error-fio"
+            style="display: none; color: crimson; margin: 0; font-size: 12px"
+          >
+            Please enter your full name!
+          </p>
+        </div>
+        <div class="form-item">
+          <label for="phoneNumber">Phone number:</label>
+          <div class="icon-input">
+            <i class="fa fa-phone icon"></i>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="number"
+              placeholder="+(998)97-123-45-67"
+              value="+998"
+            />
+          </div>
+          <p
+            class="error-phone"
+            style="display: none; color: crimson; margin: 0; font-size: 12px"
+          >
+            Please enter your phone number!
+          </p>
+        </div>
+        <div class="form-item">
+          <label for="organizationName">Company name:</label>
+          <div class="icon-input">
+            <i class="fa fa-building icon"></i>
+            <input
+              type="text"
+              id="organizationName"
+              name="org_name"
+              placeholder="Company name"
+            />
+          </div>
+          <p
+            class="error-org"
+            style="display: none; color: crimson; margin: 0; font-size: 12px"
+          >
+            Please enter your company name!
+          </p>
+        </div>
+      </div>
+
+      <button id="submit" type="submit" form="myForm" value="Submit">
+        <div class="loader"></div>
+        Send
+      </button>
+    </form>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="pdf-viewer"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
